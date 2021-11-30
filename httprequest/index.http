@@ -1,0 +1,8 @@
+POST http://localhost:3001/api/jobs/403
+Content-Type: application/json
+
+{
+ "company": "Google",
+ "jobtype": "Desarrollador"
+}
+
