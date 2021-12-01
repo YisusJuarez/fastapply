@@ -11,7 +11,7 @@ jobsRouter.post("/:id", (req, res) => {
     companyName: body.companyName,
     jobType: body.jobType,
     userId: id,
-    jobUrl: createUrl(id),
+    jobUrl: createUrl(id, req.protocol ,req.hostname),
   };
   //save job to db
   //response the job url apply to

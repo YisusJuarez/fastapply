@@ -1,8 +1,8 @@
-const createUrl = (userid) => {
+const createUrl = (userid, protocol, host) => {
   //get current server url
-  const baseUrl = process.env.BASE_URL;
+  //const baseUrl = process.env.BASE_URL;
   //create url
-  const url = `${baseUrl}/apply/${userid}`;
+  const url = `${protocol}://${host}/apply/${userid}`;
 
   return url;
 };
