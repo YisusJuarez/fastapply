@@ -1,7 +1,7 @@
 require("dotenv").config();
-const jobsRouter = require("./routers/jobsRouter.js");
-const userRouter = require("./routers/userRouter.js");
-const loginRouter = require("./routers/loginRouter.js");
+const jobsRouter = require("./controllers/jobsRouter.js");
+const userRouter = require("./controllers/userRouter.js");
+const loginRouter = require("./controllers/loginRouter.js");
 const express = require("express");
 const cors = require("cors");
 const app = express();
