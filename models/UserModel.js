@@ -4,6 +4,7 @@ const userSchema = new Schema({
     userName:String,
     email:String,
     passwordHash:String,
+    isPremium:Boolean,
     jobs:[{
         type:Schema.Types.ObjectId,
         ref:"Job"
