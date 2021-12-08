@@ -3,16 +3,16 @@ const userRouter = require('express').Router();
 const User = require('../models/UserModel');
 
 
-//create user
+//register user
 userRouter.post("/", async (req, res) => {
     const {body} = req;
-    const {username, email, password} = body;
+    const {username, email, password, userType} = body;
     const passwordHash = await bcrypt.hash(password, 10);
     const user = new User({
         userName:username,
         email:email,
         passwordHash,
-        isPremium:false
+        userType
     })
 
     const savedUser = await user.save();

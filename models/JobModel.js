@@ -8,10 +8,10 @@ const jobSchema = new Schema({
     ref:'User'
   },
   jobUrl = String,
-  applicants:{
+  applicants:[{
     type:Schema.Types.ObjectId,
-    ref:'Applicant'
-  },
+    ref:'Applicants'
+  }],
 });
 
 jobSchema.set("toJSON", {
